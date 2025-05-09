@@ -1,13 +1,10 @@
 <template>
   <div class="custom-item">
-   
-  
       <img class="custom-item__image" :src="item.image.url" :alt="item.image.alt" />
-   
-    <div class="custom-item__overlay">
-      <div class="custom-item__title">{{ item.title }}</div>
-      <div class="custom-item__desc" v-html="item.description" />
-    </div>
+      <div class="custom-item__overlay">
+        <div class="custom-item__title">{{ item.title }}</div>
+        <div class="custom-item__desc" v-html="item.description" />
+      </div>
 
   </div>
 </template>
@@ -45,6 +42,9 @@ const props = defineProps<{
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+    @media screen and (max-width: 575px) {
+      height: 268px;
     }
   }
 
