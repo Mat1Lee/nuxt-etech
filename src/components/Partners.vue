@@ -57,8 +57,7 @@
 
 
 <script lang="ts" setup>
-import { onMounted, nextTick } from 'vue';
-
+import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -91,10 +90,7 @@ const handleStyleTopButton = () => {
       });
     };
 onMounted(() => {
-  nextTick(() => {
-    handleStyleTopButton();
-  }); 
- 
+  handleStyleTopButton();
   window.addEventListener("resize", handleStyleTopButton);
 });
 </script>
