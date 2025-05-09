@@ -154,6 +154,7 @@ onMounted(() => {
     }
     &__left{
         max-width: 560px;
+        flex:1;
         .section-description{
             margin-top:40px;
             margin-bottom:79px;
@@ -214,6 +215,7 @@ onMounted(() => {
         display: flex;
         flex-direction: column;
         gap:40px;
+        max-width:560px;
         &-item{
             display:flex;
             gap:24px;
