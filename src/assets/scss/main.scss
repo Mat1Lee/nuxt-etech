@@ -1,0 +1,87 @@
+// @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Mandali&display=swap');
+
+@import "minxins.scss";
+@import "variables.scss";
+
+.container {
+  @include container;
+}
+
+* {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+button,img {
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+a,
+img,
+button,
+.scroll-to-top
+span {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  @media screen and (max-width: 1023px) {
+    font-size: 40px !important;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 30px !important;
+  }
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px !important;
+  font-weight: 400;
+  @media screen and (max-width: 1023px) {
+    font-size: 22px !important;
+  }
+}
+.banner-title {
+  @include banner-title;
+}
+.banner-des {
+  @include banner-des;
+}
+.text-p1 {
+  @include text-p1;
+}
+.item-title {
+  @include item-title;
+}
+
+.section-title {
+  @include section-title;
+}

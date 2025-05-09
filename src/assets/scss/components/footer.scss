@@ -1,0 +1,305 @@
+@import "../variables.scss";
+@font-face {
+  font-family: "Mandali";
+  src: url("../../fonts/Mandali-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../../fonts/PTSans-Regular.ttf");
+}
+@mixin container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px;
+    @media screen and (max-width: 1440px) {
+      padding: 0 120px;
+      
+    }
+    @media screen and (max-width: 1280px) {
+      padding: 0 30px;
+      
+    }
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  @mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  // Styles
+  .footer {
+    background-color: $color-primary;
+    color: $white;
+    padding: 35px 0;
+    font-family: 'PT Sans', sans-serif;
+    color:$text-color;
+
+    .container {
+      @include container;
+    }
+  
+    &__top {
+      @include flex-between;
+      padding: 35px 0;
+      padding-top:0;
+      // border-bottom: 1px solid rgba(255, 255, 255, 0.60);
+      flex-wrap: wrap;
+      gap: 30px;
+      color:$text-color;
+      @media screen and (max-width: 460px) {
+        padding: 20px 0;
+      }
+    }
+  
+    &__tagline {
+      color: $color-accent;
+      font-size: 18px;
+      font-weight: 700;
+      @include flex-center;
+      gap: 8px;
+    }
+  
+    &__badge {
+      background: $white;
+      color: $color-accent;
+      padding: 2px 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  
+    &__nav {
+      display: flex;
+      gap: 65px;
+  
+      &-link {
+        color: $white;
+        font-size: 19px;
+        text-decoration: none;
+        font-weight: 400;
+        transition: $transition-default;
+        color:$text-color;
+        &:hover {
+          color: $primary-hover;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 460px) {
+          font-size: 14px;
+          
+        }
+      }
+      @media screen and (max-width: 600px) {
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+  
+    &__middle {
+      @include flex-between;
+      margin: 35px 0;
+      // flex-wrap: wrap;
+      margin-top:0;
+      color:$text-color;
+      @media screen and (max-width: 460px) {
+        margin: 20px 0;
+      }
+    }
+  
+    &__logo {
+      display: flex;gap:30px;
+      justify-content: space-between;
+      .footer__logo__link{
+        img{
+          height: 35px;
+          max-width: 100%!important;
+          width: auto!important;
+          @media screen and (max-width: 768px) {
+            height: unset;
+          }
+        }
+        &:nth-child(1){
+          @media screen and (max-width: 768px) {
+            width: 26%;
+          }
+        }
+        &:nth-child(2){
+          @media screen and (max-width: 768px) {
+            width: 38%;
+          }
+        }
+        &:nth-child(3){
+          @media screen and (max-width: 768px) {
+            width: 26%;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        align-items: center;
+        gap: 0;
+      }
+    }
+  
+    &__heading {
+      color: $color-accent;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px; /* 150% */
+      text-align: right;
+      @media screen and (max-width: 600px) {
+        text-align: left;
+      }
+    }
+  
+    &__contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-weight: 400;
+    }
+  
+    &__social-icons {
+      cursor: pointer;
+      display: flex;
+      gap: 19px;
+    }
+    &__social-icon{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    &__social-link {
+      color: $color-accent;
+      text-decoration: none;
+      font-size: 24px;
+      transition: $transition-default;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  
+    &__bottom {
+      @include flex-center;
+      padding-top: 15px;
+      border-top: 1px solid #A0A0A0;
+      font-weight: 400;
+      justify-content: center;
+    }
+  
+    &__legal {
+      display: flex
+;
+&:hover {
+  a{
+    color: $primary-hover;
+  }
+  // color: $primary-hover;
+}
+          gap: 5px;
+          align-items: baseline;
+          @media screen and (max-width: 460px) {
+            span{
+              font-size:14px !important;
+            }
+          }
+    }
+  
+    &__legal-link {
+      color: $text-color;
+      text-decoration: none;
+      transition: $transition-default;
+  
+      &:hover {
+        color:$primary-hover;
+      }
+      @media screen and (max-width: 460px) {
+        span{
+          font-size:14px !important;
+        }
+      }
+    }
+    @media screen and (max-width: 460px) {
+      padding: 25px 0;
+    }
+  }
+  .icon-link{
+        text-decoration: none;
+        color: $text-color !important;
+        cursor: pointer;
+        font-size:16px;
+        &:hover{
+            color:$primary-hover !important;
+        }
+      }
+  @media (max-width: 768px) {
+    .footer {
+      &__top {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        font-size:14px;
+        justify-content: center;
+      }
+  
+      &__nav {
+        // flex-wrap: wrap;
+        justify-content: start;
+        gap:25px;
+        @media screen and (max-width: 600px) {
+          gap: 20px;
+          
+        }
+      }
+  
+      &__middle {
+        // flex-direction: column;
+        gap: 30px;
+        text-align: start;
+      }
+  
+      &__social-icons {
+        justify-content: center;
+      }
+  
+      &__bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        font-size:14px;
+      }
+  
+      &__legal {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+  @media (max-width: 460px) {
+    .footer {
+      &__middle {
+        // flex-direction: column;
+        gap: 20px;
+        text-align: start;
+      }
+    }
+  }
+  @media (max-width: 410px) {
+    .footer {
+      &__nav {
+        font-size: 14px;
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap:10px;
+      }
+    }
+  }
