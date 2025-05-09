@@ -300,7 +300,7 @@ console.log(chunkedItems.value);
   margin-top:80px;
   @media screen and (max-width: 768px) {
     gap: 15px;
-    
+    margin-top:40px;
   }
 }
 .our-games_list{
