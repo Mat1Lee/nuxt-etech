@@ -9,12 +9,12 @@
         :modules="modules"
 
         :breakpoints="{
-    320: { slidesPerView: 1, spaceBetween: 10 },
-    480: { slidesPerView: 1, spaceBetween: 10 }, 
-    768: { slidesPerView: 3, spaceBetween: 20 }, 
-    1024: { slidesPerView: 4, spaceBetween: 25 }, 
-    1280: { slidesPerView: 5, spaceBetween: 30 }, 
-  }"
+          320: { slidesPerView: 1, spaceBetween: 10 },
+          480: { slidesPerView: 1, spaceBetween: 10 }, 
+          768: { slidesPerView: 3, spaceBetween: 20 }, 
+          1024: { slidesPerView: 4, spaceBetween: 25 }, 
+          1280: { slidesPerView: 5, spaceBetween: 30 }, 
+        }"
         :loop="true"
         :navigation="{
           nextEl: '.box-controls .swiper-button-next-list',
@@ -57,6 +57,7 @@
 
 
 <script lang="ts" setup>
+import{nextTick,onMounted} from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -82,15 +83,21 @@ const handleStyleTopButton = () => {
       const product = document.querySelector(".partners__list");
       
       const button_option = document.querySelectorAll(".box-controls .box-btn .swiper-button");
-   
-      const height = product?.clientHeight || 0;
       if (!product&&!button_option) return;
-      button_option.forEach((btn: any) => {
+      else{
+      const height = product?.clientHeight || 100;
+      console.log(height)
+        button_option.forEach((btn: any) => {
         btn.style.top = ((height / 2) - 27) + "px";
       });
+      }
+
     };
 onMounted(() => {
-  handleStyleTopButton();
+  nextTick(()=>{
+    handleStyleTopButton();
+  })
+  
   window.addEventListener("resize", handleStyleTopButton);
 });
 </script>
