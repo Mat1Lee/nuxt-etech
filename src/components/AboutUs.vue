@@ -16,7 +16,7 @@
                             ><span
                                 class="about-main__info-item-description-suffix"
                                 v-if="item.suffix"
-                                >{{ item.suffix }}</span
+                                   >{{ t(`about.info[${index}].suffix`) }}</span
                             >+
                             </div>
                                                     <div class="about-main__info-item-title" v-html="t(`about.info[${index}].${item.title.toLowerCase().replace(/\s+/g, '')}`)"></div>
