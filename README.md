@@ -25,7 +25,7 @@ npm run dev
 https://chipper-pithivier-db61a9.netlify.app/
 
 # Mô tả
-![Banner](assets/images/banner.png)
-![About Us](assets/images/About.png)
-![Games](assets/images/list-game.png)
-![Footer](assets/images/footer.png)
+![Banner](src/assets/images/banner.png)
+![About Us](src/assets/images/About.png)
+![Games](src/assets/images/list-game.png)
+![Footer](src/assets/images/footer.png)
