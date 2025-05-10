@@ -22,7 +22,7 @@
         "user": "Người chơi",
         "game": "Trò chơi",
          "info": [
-      { "user": "Người chơi", "suffix": "M" },
+      { "users": "Người chơi", "suffix": "M" },
       { "games": "Trò chơi", "suffix": "" }
     ],
         "detail": [

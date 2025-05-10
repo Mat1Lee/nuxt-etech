@@ -30,6 +30,7 @@
                         <div class="about-main__right-item-icon">  <img :src="item.icon" :alt="item.title" class="about-main__right-item-icon-img"></div>
                         <div class="about-main__right-item-title">
                             <div class="about-main__right-item-title-text" v-html="t(`about.detail[${index}].title`) "></div>
+                            <div class="about-main__right-item-title-description" v-html="t(`about.detail[${index}].desc`)"></div>
                         </div>
                           
                        

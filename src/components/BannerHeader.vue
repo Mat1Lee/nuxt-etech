@@ -30,7 +30,7 @@
           <div class="time-separator">:</div>
           <div class="time-block">
             <div class="time-value">{{ padZero(timeLeft.minutes) }}</div>
-            <div class="time-label">{{ t('banner.time.minite') }}</div>
+            <div class="time-label">{{ t('banner.time.minute') }}</div>
           </div>
           <div class="time-separator">:</div>
           <div class="time-block">
