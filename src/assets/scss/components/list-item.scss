@@ -20,11 +20,11 @@
   }
   &__description {
     text-align: center;
-    margin-top: 24px;
     display: flex;
     justify-content: center;
     max-width: 860px;
     margin:auto;
+    margin-top: 24px;
     :deep p {
       width: 860px;
     }
