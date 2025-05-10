@@ -21,18 +21,28 @@
         "desc": "Duyệt qua tuyển chọn các trò chơi trực tuyến miễn phí của chúng tôi và có một khoảng thời gian tuyệt vời mà không cần rời khỏi trang web! Tùy chọn Trò chơi dành cho Trẻ em của chúng tôi cũng bao gồm các bài đánh giá trò chơi, các trò chơi gian lận và hướng dẫn mở rộng, và nhiều hơn nữa. Chúng tôi cũng có các bản tải xuống, video và bài báo miễn phí độc quyền. Etech đánh giá các trò chơi trẻ em phổ biến nhất từ tất cả các nền tảng trò chơi điện tử phổ biến nhất, vì vậy bạn không cần phải tìm kiếm niềm vui ở bất kỳ nơi nào khác trên Internet. Khám phá một thế giới trò chơi hoàn toàn mới trên Etech.",
         "user": "Người chơi",
         "game": "Trò chơi",
-        "time":{
-            "title":"Truy cập 24/7",
-            "desc":"Đảm bảo hoạt động kinh doanh của các nhà khai thác hoạt động trơn tru suốt cả năm. "
-        },
-        "design":{
-            "title":"Thiết kế",
-            "desc":"Kết hợp các vũ trụ giàu trí tưởng tượng, động lực chơi và lối chơi chưa từng có, trò chơi của chúng tôi vượt qua ranh giới của thế giới ảo bằng cách tạo ra lối chơi sáng tạo. "
-        },
-        "team":{
-            "title":"Đội Ngũ",
-            "desc":"Etech là một studio quốc tế, từng đoạt giải thưởng gồm các nhà thiết kế, nghệ sĩ, họa sĩ hoạt hình và nhà sản xuất chuyên tạo ra nội dung cho những tên tuổi lớn nhất trong lĩnh vực điện ảnh và trò chơi điện tử."
-        }
+         "info": [
+      { "user": "Người chơi", "suffix": "M" },
+      { "games": "Trò chơi", "suffix": "" }
+    ],
+        "detail": [
+      {
+        "title": "24 giờ",
+        "desc": "Truy cập 24/7 đảm bảo hoạt động kinh doanh của các nhà khai thác diễn ra suôn sẻ quanh năm.",
+        "icon": "/calendar-tick.png"
+      },
+      {
+        "title": "Thiết kế",
+        "desc": "Kết hợp các vũ trụ giàu trí tưởng tượng, động lực chơi và lối chơi chưa từng có, trò chơi của chúng tôi vượt qua ranh giới của thế giới ảo bằng cách tạo ra lối chơi sáng tạo.",
+        "icon": "/pen-tool-2.png"
+      },
+      {
+        "title": "Đội ngũ",
+        "desc": "Etech là một studio quốc tế từng đoạt giải thưởng, gồm các nhà thiết kế, nghệ sĩ, họa sĩ hoạt hình và nhà sản xuất chuyên tạo nội dung cho những tên tuổi lớn nhất trong lĩnh vực điện ảnh và trò chơi điện tử.",
+        "icon": "/people.png"
+      }
+    ]
+  
     },
     "our-games":{
         "title":"Trò chơi",

@@ -37,7 +37,7 @@
         <h4>{{ t('footer.subscribe.title') }}</h4>
         <p>{{ t('footer.subscribe.desc') }}</p>
         <form class="footer__form" @submit.prevent>
-          <input type="email" :placeholder="t('subscribe.email')" />
+          <input type="email" :placeholder="t('footer.subscribe.email')" />
           <img src="/arrow-right.png" alt="Arrow" class="input-icon" />
             <!-- <img src="/icons/arrow-right.svg" alt="Submit" /> -->
           

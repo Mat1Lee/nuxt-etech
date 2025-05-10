@@ -19,7 +19,7 @@
                                 >{{ item.suffix }}</span
                             >+
                             </div>
-                            <div class="about-main__info-item-title" v-html="item.title"></div>
+                                                    <div class="about-main__info-item-title" v-html="t(`about.info[${index}].${item.title.toLowerCase().replace(/\s+/g, '')}`)"></div>
                         </div>
                         </div>
                 
@@ -29,8 +29,7 @@
                    <div class="about-main__right-item" v-for="(item, index) in response.data.detail" :key="index">
                         <div class="about-main__right-item-icon">  <img :src="item.icon" :alt="item.title" class="about-main__right-item-icon-img"></div>
                         <div class="about-main__right-item-title">
-                            <div class="about-main__right-item-title-text" v-html="item.title"></div>
-                            <div class="about-main__right-item-title-description" v-html="item.description"></div>
+                            <div class="about-main__right-item-title-text" v-html="t(`about.detail[${index}].title`) "></div>
                         </div>
                           
                        
@@ -44,8 +43,7 @@
                    <div class="about-main__right-item" v-for="(item, index) in response.data.detail" :key="index">
                         <div class="about-main__right-item-icon">  <img :src="item.icon" :alt="item.title" class="about-main__right-item-icon-img"></div>
                         <div class="about-main__right-item-title">
-                            <div class="about-main__right-item-title-text" v-html="item.title"></div>
-                            <div class="about-main__right-item-title-description" v-html="item.description"></div>
+                                                       <div class="about-main__right-item-title-description" v-html="t(`about.detail[${index}].desc`)"></div>
                         </div>
                           
                        

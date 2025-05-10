@@ -21,17 +21,10 @@
     "about": {
       "title": "About Us",
       "desc": "Browse our selection of free online games and have a great time without leaving the site! Our Kids Games option also includes game reviews, extensive game cheats and walkthroughs, and much more. We have exclusive free downloads, videos, and articles as well. Etech reviews the most popular kids games from all the most popular video gaming platforms, so you don’t need to search around for fun anywhere else on the Internet. Explore a whole new world of gaming on Etech.",
-      "info":[
-        {
-          "title": "Players",
-          "suffix": "M"
-        },
-        {
-          "title": "Games",
-          "suffix": ""
-        }
-      
-      ],
+        "info": [
+      { "users": "Users", "suffix": "M" },
+      { "games": "Games", "suffix": "" }
+    ],
       "detail":[
          {
         "title": "24 - Hour",
