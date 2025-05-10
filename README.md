@@ -10,6 +10,7 @@
 - ✅ Landing page Etech
 ## 🔧 Cài đặt
 # Mobile
+![Image](https://github.com/user-attachments/assets/ef6c103b-9252-46c6-9ebd-106bd39688ba)
 ![Image](https://github.com/user-attachments/assets/650c9067-ceb8-49df-a251-ee9c78d51cb1)
 ![Image](https://github.com/user-attachments/assets/bea26460-9ef5-43eb-a022-ee5c71c6efe6)
 ![Image](https://github.com/user-attachments/assets/6acc8dbb-4aab-46f1-83e1-ec97b4018194)
