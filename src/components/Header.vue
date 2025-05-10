@@ -140,7 +140,7 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import { useRoute, useRuntimeConfig, useNuxtApp, useAsyncData } from '#app';
-import defaultImg from '@/assets/images/AISI-logo-08-1.png';
+
 interface MenuItem {
   name: string;
   path: string;
@@ -177,7 +177,7 @@ const menuItems = ref<MenuItem[]>([]);
 const dataHeader = ref<DataHeader>({});
 
 const openDropdowns = ref<Record<string, boolean>>({});
-const  { locale } = useI18n();
+const  { locale,t } = useI18n();
 
 const clickFlag = (flag: string) => {
   imgFlag.value = flag === 'vn' ? '/VN.png' : '/US.png';
@@ -202,11 +202,11 @@ const openDropdown = (event: MouseEvent) => {
 };
 const formatMenuData = (data: DataHeader): MenuItem[] => {
   return Object.values(data).map((item) => ({
-    name: item.title,
+    name: t(`header.${item.title.toLowerCase().replace(/\s+/g, '')}`),
     path: item.url,
     children: item.children
       ? Object.values(item.children).map((child) => ({
-          name: child.title,
+          name: t(`header.${child.title.toLowerCase().replace(/\s+/g, '')}`), 
           path: child.url,
         }))
       : undefined,

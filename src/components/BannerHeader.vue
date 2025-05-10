@@ -15,32 +15,32 @@
     <img src="/Fairy.png" class="fairy"/>
       <div class="inner-banner">
         <div class="banner-text">
-            <div class="banner-title" v-html="dataBanner.title_main"></div>
+            <div class="banner-title" v-html="t('banner.title')"></div>
             <div class="countdown-container">
         <div class="countdown-wrapper">
           <div class="time-block">
             <div class="time-value">{{ padZero(timeLeft.days) }}</div>
-            <div class="time-label">Days</div>
+            <div class="time-label">{{ t('banner.time.day') }}</div>
           </div>
           <div class="time-separator">:</div>
           <div class="time-block">
             <div class="time-value">{{ padZero(timeLeft.hours) }}</div>
-            <div class="time-label">Hours</div>
+            <div class="time-label">{{ t('banner.time.hour') }}</div>
           </div>
           <div class="time-separator">:</div>
           <div class="time-block">
             <div class="time-value">{{ padZero(timeLeft.minutes) }}</div>
-            <div class="time-label">Minutes</div>
+            <div class="time-label">{{ t('banner.time.minite') }}</div>
           </div>
           <div class="time-separator">:</div>
           <div class="time-block">
             <div class="time-value">{{ padZero(timeLeft.seconds) }}</div>
-            <div class="time-label">Seconds</div>
+            <div class="time-label">{{ t('banner.time.second') }}</div>
           </div>
         </div>
       </div>
             <div class="banner-bottom">
-                <div class="section-description banner-des" v-html="dataBanner.title_sub"></div>
+                <div class="section-description banner-des" v-html="t('banner.des')"></div>
 
                 <div class="banner-bottom__input">
                   <input type="email" placeholder="Enter your email" />
@@ -63,6 +63,8 @@
   
   <script lang="ts" setup>
   import { defineProps, ref, onMounted, watch } from "vue";
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
   const route = useRoute()
   const isSingle = ref(false);
   const dataBanner = {

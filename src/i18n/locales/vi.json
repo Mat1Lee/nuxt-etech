@@ -1,4 +1,10 @@
 {
+    "header":{
+        "aboutus": "Về chúng tôi",
+        "games": "Trò chơi",
+        "partners": "Đối tác",
+        "contactus": "Liên hệ"
+    },
     "banner":{
         "title": "Trò chơi sắp ra mắt",
         "des": "Chúng tôi sẽ trở lại với một điều tuyệt vời. Để nhận các bản cập nhật mới nhất về trò chơi, vui lòng đăng ký nhận bản tin của chúng tôi.",
@@ -38,6 +44,7 @@
     },
     "footer":{
        "address":{
+        "title":"Địa chỉ",
         "address1":"Valletta Buildings, South Street, Valletta - VLT 1103 Malta, Mỹ",
         "address2":"Số 20 đường Phan Đăng Lưu, quận Hải Châu, thành phố Đà Nẵng, Việt Nam",
         "phone":""
@@ -45,7 +52,7 @@
        "subscribe":{
         "title":"Theo dõi",
         "desc":"Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi.",
-        "email":"Địa chỉ email của bạn",
+        "email":"Địa chỉ email của bạn"
     
        }
     }

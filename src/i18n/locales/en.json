@@ -1,4 +1,12 @@
 {
+  "header":{
+   
+    "aboutus": "About",
+    "games": "Games",
+    "partners": "Partners",
+    "contactus": "Contact"
+   
+  },
     "banner": {
       "title": "We’re Getting Ready",
       "des": "We will back to something amazing. Getting the latest updates about our games. Please sign up to our newsletter.",
@@ -50,6 +58,7 @@
     },
     "footer": {
       "address": {
+        "title":"Address",
         "address1": "Valletta Buildings, South Street, Valletta - VLT 1103 Malta, USA",
         "address2": "No. 20 Phan Dang Luu Street, Hai Chau District, Da Nang City, Vietnam",
         "phone": ""
