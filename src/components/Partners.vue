@@ -203,6 +203,11 @@ onMounted(() => {
   height: auto;
   // box-sizing: border-box;
   padding: 0 10px;
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
 }
 
 </style>
