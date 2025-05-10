@@ -17,7 +17,7 @@
 
       <!-- Address -->
       <div class="footer__column">
-        <h4>Address</h4>
+        <h4>{{ t('footer.address.title') }}</h4>
         <div class="footer__address">
           <img src="/location.png" alt="Location" />
         <div>
@@ -34,8 +34,8 @@
 
       <!-- Subscribe -->
       <div class="footer__column">
-        <h4>{{ t('subscribe.title') }}</h4>
-        <p>{{ t('subscribe.desc') }}</p>
+        <h4>{{ t('footer.subscribe.title') }}</h4>
+        <p>{{ t('footer.subscribe.desc') }}</p>
         <form class="footer__form" @submit.prevent>
           <input type="email" :placeholder="t('subscribe.email')" />
           <img src="/arrow-right.png" alt="Arrow" class="input-icon" />
