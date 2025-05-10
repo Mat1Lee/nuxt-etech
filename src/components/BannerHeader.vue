@@ -132,6 +132,8 @@ onBeforeUnmount(() => {
   
   <style lang="scss">
    @import "@/assets/scss/components/banner-header.scss";
-
+.banner-bottom {
+  display: block !important;
+}
   </style>
   
