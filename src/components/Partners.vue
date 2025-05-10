@@ -1,7 +1,7 @@
 <template>
   <section class="partners">
     <div class="partners__content container">
-      <div class="section-title" v-html="response.data.title"></div>
+      <div class="section-title" v-html="t('partners.title')"></div>
       <div class="partners__list" style="position: relative;">
           <Swiper
             :slides-per-view="5"
@@ -58,6 +58,8 @@
 
 
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 import{nextTick,onMounted} from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';

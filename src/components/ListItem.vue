@@ -2,34 +2,33 @@
 <template>
   <section class="our-games">
     <div class="container-list">
-      <div class="our-games__title section-title" v-html="response.data.title"></div>
-      <div class="our-games__description text-p1" v-html="response.data.description"></div>
-      <!-- <div class="our-games__grid">
-        <div 
-          v-for="(item, index) in response.data.list_games" 
-          :key="item.id"
-          class="our-games__item"
-          :class="{ 
-            'column-2': (index % 4 === 1), 
-            'column-4': (index % 4 === 3)
-          }"
-        >
-          <CustomItem :item="item" />
-        </div>
-      </div> -->
+      <div class="our-games__title section-title" v-html="t('our-games.title')"></div>
+      <div class="our-games__description text-p1" v-html="t('our-games.desc')"></div>
+
       <div class="list-container">
-        <div class="our-games_list" v-for="(chunks, index) in chunkedItems" :key="index">
-          <div class="our-games__col" v-for="(chunk, index) in chunks" :key="index">
-            <div class="our-games__grids">
-              <div v-for="(item, index) in chunk" :key="item.id" class="our-games__item" :class="{
-                'column-2': (index % 4 === 1),
+              <div class="our-games_list"
+      v-for="(chunks, index) in chunkedItems"
+      :key="index"
+      >
+        <div class="our-games__col"
+        v-for="(chunk, index) in chunks"
+        :key="index"
+        >
+          <div class="our-games__grids">
+            <div 
+              v-for="(item, index) in chunk" 
+              :key="item.id"
+              class="our-games__item"
+              :class="{ 
+                'column-2': (index % 4 === 1), 
                 'column-4': (index % 4 === 3)
-              }">
-                <CustomItem :item="item" />
-              </div>
+              }"
+            >
+              <CustomItem :item="item" />
             </div>
           </div>
         </div>
+      </div>
       </div>
 
     </div>
@@ -37,7 +36,8 @@
 </template>
 
 <script lang="ts" setup>
-import { Interface } from 'readline';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 import { ref } from 'vue';
 interface Item {
   id: number;

@@ -20,7 +20,10 @@
         <h4>Address</h4>
         <div class="footer__address">
           <img src="/location.png" alt="Location" />
-        <div v-html="dataFooter.address.location.address"></div>
+        <div>
+          <p>{{ t('footer.address.address1') }}</p>
+          <p>{{ t('footer.address.address2') }}</p>
+        </div>
         </div>
  
         <div class="footer__phone">
@@ -31,10 +34,10 @@
 
       <!-- Subscribe -->
       <div class="footer__column">
-        <h4>Subscribe</h4>
-        <p>Subscribe to our newsletter and be the first to know about our updates</p>
+        <h4>{{ t('subscribe.title') }}</h4>
+        <p>{{ t('subscribe.desc') }}</p>
         <form class="footer__form" @submit.prevent>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" :placeholder="t('subscribe.email')" />
           <img src="/arrow-right.png" alt="Arrow" class="input-icon" />
             <!-- <img src="/icons/arrow-right.svg" alt="Submit" /> -->
           
@@ -49,8 +52,9 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { link } from 'fs';
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 const dataFooter = {
   socials: [
