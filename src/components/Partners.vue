@@ -4,25 +4,26 @@
       <div class="section-title" v-html="response.data.title"></div>
       <div class="partners__list" style="position: relative;">
           <Swiper
-        :slides-per-view="5"
-        :space-between="30"
-        :modules="modules"
-
-        :breakpoints="{
-          320: { slidesPerView: 1, spaceBetween: 10 },
-          480: { slidesPerView: 1, spaceBetween: 10 }, 
-          768: { slidesPerView: 3, spaceBetween: 20 }, 
-          1024: { slidesPerView: 4, spaceBetween: 25 }, 
-          1280: { slidesPerView: 5, spaceBetween: 30 }, 
-        }"
-        :loop="true"
-        :navigation="{
-          nextEl: '.box-controls .swiper-button-next-list',
-          prevEl: '.box-controls .swiper-button-prev-list',
-        }"
-        pagination
-        class="partners__items"
-      >
+            :slides-per-view="5"
+            :space-between="30"
+            :modules="modules"
+            :centered-slides="true"
+            :free-mode="false"
+            :breakpoints="{
+              320: { slidesPerView: 1.5, spaceBetween: 10, centeredSlides: true },
+              480: { slidesPerView: 2, spaceBetween: 15, centeredSlides: true },
+              768: { slidesPerView: 3, spaceBetween: 20, centeredSlides: true },
+              1024: { slidesPerView: 4, spaceBetween: 25 },
+              1280: { slidesPerView: 5, spaceBetween: 30 },
+            }"
+            :loop="true"
+            :navigation="{
+              nextEl: '.box-controls .swiper-button-next-list',
+              prevEl: '.box-controls .swiper-button-prev-list',
+            }"
+            pagination
+            class="partners__items"
+          >
         <SwiperSlide
           v-for="(item, index) in response.data.info"
           :key="index"
@@ -107,7 +108,7 @@ onMounted(() => {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 15px;
+  padding: 60px 0;
   box-sizing: border-box;
 }
 .partners {
@@ -194,22 +195,28 @@ onMounted(() => {
 }
 
 .partners__items {
-  width: 100%;
-  max-width: 1440px;
-  box-sizing: border-box;
-}
-.swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   height: auto;
-  // box-sizing: border-box;
   padding: 0 10px;
-  img{
-    object-fit: cover;
-    width: 100%;
+  img {
+    object-fit: contain;
     height: auto;
+    @media screen and (max-width: 768px) {
+    width: 188px !important;
+  }
+  
   }
 }
 
