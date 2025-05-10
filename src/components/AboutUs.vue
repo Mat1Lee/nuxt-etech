@@ -152,12 +152,19 @@ onMounted(() => {
         align-items: start;
         
     }
+    @media (max-width: 768px){
+        margin-bottom: 40px;
+    }
     &__left{
         max-width: 560px;
         flex:1;
         .section-description{
             margin-top:40px;
             margin-bottom:79px;
+            @media (max-width:768px){
+                margin-top:16px;
+                margin-bottom:40px;
+            }
         }
     }
     &__info{

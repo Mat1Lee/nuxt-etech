@@ -96,7 +96,7 @@ const dataFooter = {
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 68px;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;

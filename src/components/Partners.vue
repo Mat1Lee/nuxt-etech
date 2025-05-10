@@ -139,6 +139,9 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   gap:80px;
+  @media (max-width:768px){
+    gap:40px;
+  }
   }
   &__items {
     width: 100%;
