@@ -271,7 +271,7 @@ const fetchHeaderMenu = async () => {
   }
 };
 onMounted(() => {
-
+  imgFlag.value = useI18n().locale.value === 'vi' ? '/VN.png' : '/US.png';
   window.addEventListener('scroll', handleScroll);
   document.addEventListener('click', handleClickOutside);
 });
