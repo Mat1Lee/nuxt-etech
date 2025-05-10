@@ -25,7 +25,7 @@
                 
 
                 </div>
-                <div class="about-main__right">
+                <div class="about-main__right pc">
                    <div class="about-main__right-item" v-for="(item, index) in response.data.detail" :key="index">
                         <div class="about-main__right-item-icon">  <img :src="item.icon" :alt="item.title" class="about-main__right-item-icon-img"></div>
                         <div class="about-main__right-item-title">
@@ -38,7 +38,21 @@
 
                 </div>
             </div>
-            <div class="about-main__image">
+        
+        </div>    
+                <div class="about-main__right mb">
+                   <div class="about-main__right-item" v-for="(item, index) in response.data.detail" :key="index">
+                        <div class="about-main__right-item-icon">  <img :src="item.icon" :alt="item.title" class="about-main__right-item-icon-img"></div>
+                        <div class="about-main__right-item-title">
+                            <div class="about-main__right-item-title-text" v-html="item.title"></div>
+                            <div class="about-main__right-item-title-description" v-html="item.description"></div>
+                        </div>
+                          
+                       
+                    </div>
+
+                </div>
+        <div class="about-main__image">
                 <div class="about-main__image-witch">
                      <img  src="/Illustrator.png" class="witch"/>
                 </div>
@@ -49,7 +63,6 @@
                
 
             </div>
-        </div>
     </section>
 </template>
 <script lang="ts" setup>
@@ -142,6 +155,13 @@ onMounted(() => {
 
 </script>
 <style scoped lang="scss">
+.about-us{
+ @media screen and (max-width: 1200px) {
+        .container{
+            padding-bottom:0;
+        }
+    }
+}
 .about-main{
     display:flex;
     justify-content: center;
@@ -222,7 +242,7 @@ onMounted(() => {
         display: flex;
         flex-direction: column;
         gap:40px;
-        max-width:560px;
+        max-width: 560px;
         &-item{
             display:flex;
             gap:24px;
@@ -255,8 +275,29 @@ onMounted(() => {
                 }
             }
         }
+        &.pc{
+            display: flex;
+        }
+        &.mb{
+            display: none;
+        }
+        @media screen and (max-width: 1200px) {
+       max-width: unset;
+            &.mb{
+                display: flex;
+                margin-bottom:68px;
+            }
+            &.pc{
+                display: none;
+            }
+            
+        }
         @media screen and (max-width: 768px) {
            padding:40px 16px;
+            &.mb{
+                display: flex;
+                margin-bottom:40px;
+            }
         }
     }
     &__image{
