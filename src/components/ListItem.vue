@@ -18,29 +18,18 @@
         </div>
       </div> -->
       <div class="list-container">
-              <div class="our-games_list"
-      v-for="(chunks, index) in chunkedItems"
-      :key="index"
-      >
-        <div class="our-games__col"
-        v-for="(chunk, index) in chunks"
-        :key="index"
-        >
-          <div class="our-games__grids">
-            <div 
-              v-for="(item, index) in chunk" 
-              :key="item.id"
-              class="our-games__item"
-              :class="{ 
-                'column-2': (index % 4 === 1), 
+        <div class="our-games_list" v-for="(chunks, index) in chunkedItems" :key="index">
+          <div class="our-games__col" v-for="(chunk, index) in chunks" :key="index">
+            <div class="our-games__grids">
+              <div v-for="(item, index) in chunk" :key="item.id" class="our-games__item" :class="{
+                'column-2': (index % 4 === 1),
                 'column-4': (index % 4 === 3)
-              }"
-            >
-              <CustomItem :item="item" />
+              }">
+                <CustomItem :item="item" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
 
     </div>
@@ -197,8 +186,8 @@ const response = ref<ResponseData>({
   }
 });
 const chunkedItems = computed(() => {
-  const chunkSize = 3; // Số lượng item trong mỗi mảng con
-  const groupSize = 2; // Số lượng mảng con trong mỗi nhóm
+  const chunkSize = 3;
+  const groupSize = 2;
   const listGames = response.value.data.list_games;
   const result = [];
 
@@ -225,31 +214,36 @@ console.log(chunkedItems.value);
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 80px;
+
   @media screen and (max-width: 1440px) {
     padding: 0 40px;
-    
+
   }
+
   @media screen and (max-width: 768px) {
     padding: 0 20px;
-    
+
   }
 }
+
 .our-games {
   // padding: 40px 0;
 
   &__title {
     font-family: "Playfair Display";
     text-align: center;
-   
+
   }
+
   &__description {
     text-align: center;
-   margin-top:24px;
-   display: flex;
-   justify-content: center;
-   :deep p{
-    width: 860px;
-   }
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+
+    :deep p {
+      width: 860px;
+    }
   }
 
 
@@ -261,103 +255,110 @@ console.log(chunkedItems.value);
     row-gap: 40px;
     // max-width: 1200px;
     margin: 0 auto;
-    margin-top:80px;
+    margin-top: 80px;
+
     @media screen and (max-width: 1440px) {
       gap: 20px;
-      
+
     }
   }
 
   &__item {
     position: relative;
-   
+
     width: 100%;
-   
+
   }
 
   @media (max-width: 1320px) {
     &__grid {
       grid-template-columns: repeat(3, 1fr);
     }
-    
-   
+
+
   }
 
   @media (max-width: 768px) {
     &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
-    
-   
+
+
   }
 
-  
+
 }
-.list-container{
- display:grid;
+
+.list-container {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  margin-top:80px;
+  margin-top: 80px;
+
   @media screen and (max-width: 768px) {
     gap: 15px;
-    margin-top:40px;
+    margin-top: 40px;
   }
 }
-.our-games_list{
-  display:grid;
+
+.our-games_list {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-   &:nth-child(2n+2) {
-      
-   
-        @media (max-width: 1280px) {
+
+  &:nth-child(2n+2) {
+    @media (max-width: 1280px) {
       margin-top: 0;
-     margin-top: 40px;
-  
+      margin-top: 40px;
     }
+    @media (max-width: 768px){
+      margin-top:36px;
     }
+  }
+
   @media screen and (max-width: 1440px) {
     gap: 40px;
-    
+
   }
+
   @media (max-width: 1280px) {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-     
+
   }
+
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    gap:15px;
+    gap: 15px;
   }
-  .our-games__col{
+
+  .our-games__col {
     display: flex;
     flex-direction: column;
     gap: 40px;
     justify-content: space-between;
+
     &:nth-child(2n+2) {
       margin-top: 40px;
-   
-        @media (max-width: 1280px) {
-      margin-top: 0;
-     
-  
+
+      @media (max-width: 1280px) {
+        margin-top: 0;
+      }
     }
-    }
-  
+
     @media (max-width: 768px) {
       gap: 20px;
-     
-  
     }
-    .our-games__grids{
-     display: flex;
-     flex-direction: column;
-     gap:40px;
-     width: 100%;
-       justify-content: space-between;
-     @media (max-width: 768px) {
-      gap: 20px;
-     }
+    .our-games__grids {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 100%;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        gap: 20px;
+      }
     }
   }
 }

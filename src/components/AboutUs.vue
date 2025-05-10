@@ -149,7 +149,7 @@ onMounted(() => {
     margin-bottom:68px;
     @media screen and (max-width: 1200px) {
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         
     }
     &__left{

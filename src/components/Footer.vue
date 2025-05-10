@@ -78,7 +78,7 @@ const dataFooter = {
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 40px 20px;
+  padding: 40px 16px;
 
  
   &-logo{
