@@ -20,3 +20,6 @@ npm install
 
 # Chạy dev server
 npm run dev
+
+#live site
+https://chipper-pithivier-db61a9.netlify.app/
