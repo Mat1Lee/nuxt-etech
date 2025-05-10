@@ -60,4 +60,183 @@ $cursor: scale-color($color, $lightness: -60%);
      }
     }
 
+     
+  .banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    &.desktop {
+      display: block;
+    }
+    &.mobile {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      &.desktop {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+  
+    .banner-text {
+        text-align: center;
+    max-width: 860px;
+    padding:20px;
+    padding-bottom:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   @media screen and (max-width: 768px) {
+    margin-top:95px;
+   }
     
+    }
+    .banner-bottom{
+        margin-top:97px;
+        max-width: 560px;
+        img{
+          padding: 0 14px;
+        }
+        &__input{
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          background: #FFFFFF;
+            margin-top:32px; 
+             border: 1px solid #FFF; 
+            border-radius: 8px;
+            input{
+            flex: 1;
+            padding: 10px;
+          
+            background: transparent;
+            color: #545454;
+           
+            border: none;
+            outline: none;
+            width: 100%;
+            max-width: 560px;
+            &::placeholder {
+                color: #545454;
+            }
+          
+        }  
+        @media screen and (max-width: 768px) {
+              margin-top:16px;
+              
+            }
+        }
+    
+        @media screen and (max-width: 768px) {
+           margin-top:40px;
+    }
+  }
+    .countdown-container {
+     background: #FFFFFF;
+    margin-top:20px;
+      padding: 26px 40px;
+      border-radius: 21px;
+         max-width: 750px;
+      .countdown-wrapper {
+        display: flex;
+      
+        justify-content: space-between;
+        gap:52px;
+     @media screen and (max-width: 768px) {
+          gap: 20px;
+        }
+        @media screen and (max-width: 575px) {
+          gap: 4px;
+        }
+        
+        @media screen and (max-width: 390px) {
+          gap: 4px;
+        }
+        
+     
+        .time-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          
+          .time-value {
+            font-size: 60px;
+            line-height: 64px;
+            letter-spacing: 4.8px;
+            font-family: "Playfair Display";
+            font-weight: bold;
+            block-size:80px;
+            inline-size: 80px;
+            @media screen and (max-width: 768px) {
+              font-size: 36px;
+              line-height: 45px;
+              block-size:46px;
+              letter-spacing: 0;
+              inline-size: 46px;
+                
+            }
+          }
+          
+          .time-label {
+            font-size:15.64px;
+            letter-spacing: -0.65px;
+            font-weight: 700;
+            font-family: "Montserrat";
+            @media screen and (max-width: 768px) {
+              font-size: 12px;
+             
+                
+            }
+          }
+        }
+        
+        .time-separator {
+          font-size: 65.17px;
+          line-height: normal;
+          font-family: "Montserrat";
+          font-style: normal;
+          letter-spacing: -0.65px;
+          font-weight: bold;
+          @media screen and (max-width: 768px) {
+            font-size: 40px;
+            line-height: normal;
+            // left: ;
+            
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        padding: 24px 26px;
+        max-width: 100%;
+        
+      }
+    }
+    .master-main-banner_image .fairy {
+      @media screen and (max-width: 768px) {
+        display: none;
+        
+      }
+    }
+    .master-main-banner_image .fairy-mb {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; 
+        
+      }
+    }
