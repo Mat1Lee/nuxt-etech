@@ -1,4 +1,7 @@
 # Nuxt build output
+dist
+node_modules
+src/.node_modules/
 src/.output/
 src/dist/
 src/.nuxt/
