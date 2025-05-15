@@ -1,0 +1,4 @@
+# Nuxt build output
+src/.output/
+src/dist/
+src/.nuxt/
